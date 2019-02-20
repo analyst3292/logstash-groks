@@ -1,0 +1,3 @@
+CTZ (?:[PMCE][SD]T|UTC|GMT)
+CNSTS %{DATE_US}:%{TIME}\s%{CTZ}
+DICAM default ICA Message %{INT} %{INT} \:  \"Session setup data send\: Session GUID \[%{GREEDYDATA:session_guid}\], Client IP/Port \[%{IP:client_ip}/%{INT:client_port}\], Server IP/Port \[%{IP:server_ip}/%{INT:server_port}\], MSI Client Cookie \[%{GREEDYDATA:msi_cookie}\],(\s)?Session setup time \[%{CNSTS:session_setup_time}\], Client Type \[%{GREEDYDATA:client_type}\], User \[%{GREEDYDATA:user}\], Client \[%{IP:client}\], Server \[%{DATA:server}\], Ctx Flags \[%{GREEDYDATA:ctx_flags}\], Track Flags \[%{GREEDYDATA:track_flags}\], Skip Code \[%{INT:skip_code}\]\"

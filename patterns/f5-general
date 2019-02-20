@@ -1,0 +1,4 @@
+F5TS %{MONTHDAY}/%{MONTH}/%{YEAR}:%{TIME}
+
+F5SSLACC \[ssl_acc\] %{IP:src_ip} (-|%{GREEDYDATA}) (-|%{WORD:user}) \[%{F5TS:access_timestamp} %{GREEDYDATA}\] \"%{URIPATH:uri_path}\" %{INT:http_status_code} %{INT}
+F5SSLREQ \[ssl_req\]\[%{F5TS:access_timestamp} %{GREEDYDATA}\] %{IP:src_ip} %{GREEDYDATA:ssl_version} %{GREEDYDATA:cipher} \"%{URIPATH:uri_path}\" %{INT}

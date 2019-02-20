@@ -1,0 +1,11 @@
+ASA55250 Debug: trust DNS glue record %{DATA:domian_name}\s+%{IP:domain_name_ip}: %{WORD}
+ASA55251 Debug: DNS encache \(%{DATA:domian_name}\, %{DATA:query_type}\, \[\(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\)\]\, %{INT}\)
+ASA55252 Debug: DNS encache \(%{DATA:domian_name}\, %{DATA:query_type}\, \[\(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\), \(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\)\]\, %{INT}\)
+ASA55253 Debug: DNS encache \(%{DATA:domian_name}\, %{DATA:query_type}\, \[\(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\), \(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\), \(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\)\]\, %{INT}\)
+ASA55254 Debug: DNS encache \(%{DATA:domian_name}\, %{DATA:query_type}\, \[\(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\), \(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\), \(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\), \(%{GREEDYDATA}\, \'%{IP:domain_name_ip}\'\)\]\, %{INT}\)
+ASA55255 Debug: DNS query: %{WORD:query_type}?(\s+?)?\(\'%{URIHOST:domian_name}\'\,?(\s+?)?\'%{DATA:record_type}\'?(\,?(\s+?)?\'%{GREEDYDATA:query_response}\')??(\,%{INT})?\)
+ASA55256 Debug: following %{DATA:query_type} %{DATA:domian_name}\s\=\>\s\(%{DATA}\, \'%{DATA:query_response}\'\)
+ASA55257 Debug: DNS encache \(%{DATA:domian_name}\, %{DATA:query_type}\, \[\(%{DATA}\, \'%{URIHOST:query_response}\'\)\]\, %{INT}\)
+ASA55258 Debug: DNS query: %{WORD:query_type}?(\s+?)?\(\'%{DATA:domian_name}\'\,?(\s+?)?\'%{DATA:record_type}\'?(\,?(\s+?)?\'%{GREEDYDATA:query_response}\')??(\,%{INT})?\)
+ASA55259 Debug: DNS encache \(%{DATA:domian_name}\, %{DATA:query_type}\, \[\(%{GREEDYDATA}\, \'%{DATA:query_response}\'\)\]\, %{INT}\)
+ASA5525A Debug: Received NXDomain for domain %{DATA:domain_name} type %{WORD:query_type}

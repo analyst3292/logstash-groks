@@ -1,0 +1,2 @@
+AUDITTRAIL user=%{GREEDYDATA:user} pid=%{NUMBER} utc=%{NUMBER} centrifyEventID=%{NUMBER:centrify_event_id} status=%{DATA:status} server=%{URIPROTO}/%{GREEDYDATA:server}
+QARS user=%{GREEDYDATA:user} pid=%{NUMBER} utc=%{NUMBER} centrifyEventID=%{NUMBER:centrify_event_id} status=%{DATA:status} service=%{DATA:service} parameters=%{DATA:parameters}
